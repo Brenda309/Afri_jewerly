@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AfriJewerlyApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AfriJewerlyApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(AfriJewerlyApplication.class, args);
+    }
 
 }
