@@ -43,8 +43,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests((authorize) ->
                         authorize.requestMatchers(HttpMethod.GET, "/api/**").permitAll()
                                 .requestMatchers("/api/auth/**").permitAll()
-                                .requestMatchers("/api/products").permitAll()
-                                .requestMatchers("/api/cart").permitAll()
+                                .requestMatchers("/api/products/**").permitAll()
+                                .requestMatchers("/api/cart/**").permitAll()
+                                .requestMatchers("/api/orders/**").permitAll()
                                 .anyRequest().authenticated()
                 );
         return http.build();

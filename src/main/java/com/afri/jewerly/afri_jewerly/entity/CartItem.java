@@ -1,5 +1,4 @@
 package com.afri.jewerly.afri_jewerly.entity;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,7 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name = "cart_items")
-
 public class CartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,5 +22,9 @@ public class CartItem {
 
     private int quantity;
 
-    // Getters and Setters
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Order order;
+
+    // Additional methods if necessary
 }
